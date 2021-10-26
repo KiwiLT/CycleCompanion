@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CycleCompanion.MainPage">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+            <GradientStop Color="#7F142872"
+                          Offset="0.1"/>
+            <GradientStop Color="#7F6B1FF8"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout>
+        <Frame Padding="24" CornerRadius="0">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Label Text="Hoi! Leuk dat je meedoet." HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Image Source="LocationIcon.png" Scale="0.7" HeightRequest="200"/>
+        <StackLayout Padding="10">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label Text="Check hier in/uit" TextColor="White" HorizontalTextAlignment="Center" FontSize="30"/>
+        </StackLayout>
+        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" Padding="20" Margin="-5">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Button Text="Inchecken" HorizontalOptions="Center" WidthRequest="200" Margin="10">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0"
+                                             EndPoint="1,0">
+                            <GradientStop Color="#1F5502"
+                                          Offset="0.1"/>
+                            <GradientStop Color="#45FF00"
+                                          Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Text="Uitchecken" HorizontalOptions="Center" WidthRequest="200" Margin="10">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0"
+                                             EndPoint="1,0">
+                            <GradientStop Color="#8D0000"
+                                          Offset="0.1"/>
+                            <GradientStop Color="#FF0000"
+                                          Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout BackgroundColor="#142872" VerticalOptions="End">
+            <Label Text="Menu" TextColor="White" HorizontalTextAlignment="Center" FontSize="20"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
