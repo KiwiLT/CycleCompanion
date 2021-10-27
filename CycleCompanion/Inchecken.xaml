@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CycleCompanion.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CycleCompanion"
+             x:Class="CycleCompanion.Inchecken">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0"
                              EndPoint="1,0">
@@ -23,7 +23,11 @@
                                   Offset="1.0"/>
                 </LinearGradientBrush>
             </Frame.Background>
-            <Label Text="Hoi! Leuk dat je meedoet." HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <StackLayout>
+                <Label Text= "{Binding userName, StringFormat='Hoi {0}!'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="Leuk dat je meedoet!" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
+            </StackLayout>
+            
         </Frame>
         <Image Source="LocationIcon.png" Scale="0.7" HeightRequest="200"/>
         <StackLayout Padding="10">
@@ -38,9 +42,9 @@
             </StackLayout.Background>
             <Label Text="Check hier in/uit" TextColor="White" HorizontalTextAlignment="Center" FontSize="30"/>
         </StackLayout>
-        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" Padding="20" Margin="-5">
+        <StackLayout BackgroundColor="White" Padding="10" Margin="-5" VerticalOptions="FillAndExpand">
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Button Text="Inchecken" HorizontalOptions="Center" WidthRequest="200" Margin="10">
+                <Button Text="Inchecken" HorizontalOptions="Center" WidthRequest="200" Margin="10" TextColor="White" FontSize="20" TextTransform="None" ImageSource="check.png" CornerRadius="10">
                     <Button.Background>
                         <LinearGradientBrush StartPoint="0,0"
                                              EndPoint="1,0">
@@ -51,7 +55,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button Text="Uitchecken" HorizontalOptions="Center" WidthRequest="200" Margin="10">
+                <Button Text="Uitchecken" HorizontalOptions="Center" WidthRequest="200" Margin="10" TextColor="White" FontSize="20" TextTransform="None" ImageSource="Uitchecken.png" CornerRadius="10">
                     <Button.Background>
                         <LinearGradientBrush StartPoint="0,0"
                                              EndPoint="1,0">
@@ -64,10 +68,23 @@
                 </Button>
             </StackLayout>
         </StackLayout>
-
-        <StackLayout BackgroundColor="#142872" VerticalOptions="End">
-            <Label Text="Menu" TextColor="White" HorizontalTextAlignment="Center" FontSize="20"/>
-        </StackLayout>
+        <Grid BackgroundColor="#142872" VerticalOptions="End" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" ImageSource="MenuArrowLeft.png" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" Clicked="Navigate_Main"/>
+            <Frame Grid.Column="1" BackgroundColor="White" HasShadow="False"/>
+            <Button Grid.Column="2" Text="Profiel" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
+            <Frame Grid.Column="3" BackgroundColor="White" HasShadow="False"/>
+            <Button Grid.Column="4" Text="Badges" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
