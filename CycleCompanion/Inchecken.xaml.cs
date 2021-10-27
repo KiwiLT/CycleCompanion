@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace CycleCompanion
 {
-    public partial class MainPage : ContentPage
+    public partial class Inchecken : ContentPage
     {
         public string userName
         {
@@ -17,15 +17,15 @@ namespace CycleCompanion
                 return "Kees";
             }
         }
-        public MainPage()
+        public Inchecken()
         {
             BindingContext = this;
             InitializeComponent();
         }
 
-        private async void Navigate_Inchecken(System.Object sender, System.EventArgs e)
+        public async void Navigate_Main(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Inchecken());
+            await Navigation.PushModalAsync(new MainPage());
         }
     }
 }
