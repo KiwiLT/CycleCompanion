@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CycleCompanion.Profiel">
+<ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+            <GradientStop Color="#7F142872"
+                          Offset="0.1"/>
+            <GradientStop Color="#7F6B1FF8"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout>
+        <Frame Padding="24" CornerRadius="0">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Kees Post"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="48" Margin="10, 10, 0, 0" />
+                <Image Grid.Column="1" Source="Profiel.png" Margin="0, 0, 10, 0" HeightRequest="150"/>
+            </Grid>
+        </Frame>
+        <StackLayout BackgroundColor="White" Padding="10" Margin="-5" VerticalOptions="FillAndExpand">
+            <Label Grid.Column="0" Text="Nummer 234322"  FontFamily="Montserrat" FontAttributes="Bold" TextColor="Black" FontSize="44"/>
+        </StackLayout>
+        <StackLayout Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Kees Post"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="48" Margin="10, 10, 0, 0" />
+                <Image Grid.Column="1" Source="Profiel.png" Margin="0, 0, 10, 0" HeightRequest="150"/>
+            </Grid>
+        </StackLayout>
+
+        <Grid BackgroundColor="#142872" VerticalOptions="End" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" ImageSource="MenuArrowLeft.png" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" Clicked="Navigate_Main"/>
+            <Frame Grid.Column="1" BackgroundColor="White" HasShadow="False"/>
+            <Button Grid.Column="2" Text="Profiel" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
+            <Frame Grid.Column="3" BackgroundColor="White" HasShadow="False"/>
+            <Button Grid.Column="4" Text="Badges" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
