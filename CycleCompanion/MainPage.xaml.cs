@@ -27,5 +27,10 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Inchecken());
         }
+
+        private async void Navigate_Statistieken(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Statistieken());
+        }
     }
 }
