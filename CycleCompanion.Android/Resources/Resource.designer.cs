@@ -11799,6 +11799,9 @@ namespace CycleCompanion.Droid
 			// aapt resource value: 0x7F070093
 			public const int Uitchecken = 2131165331;
 			
+			// aapt resource value: 0x7F070094
+			public const int VierdeBg = 2131165332;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

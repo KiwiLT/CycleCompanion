@@ -21,6 +21,7 @@
             </StackLayout>
         </Frame>
         <Button Text="Inchecken" BackgroundColor="Gray" Clicked="Navigate_Inchecken"/>
+        <Button Text="Statistieken" BackgroundColor="Gray" Clicked="Navigate_Statistieken"/>
         
     </StackLayout>
 
