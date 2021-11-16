@@ -97,7 +97,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\DerdeBg.png">
+    <AndroidResource Include="Resources\drawable\VierdeBg.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
