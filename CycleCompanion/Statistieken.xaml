@@ -18,8 +18,40 @@
             <Label Text= "Hoi 1018958" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             
         </Frame>
+        
         <StackLayout VerticalOptions="FillAndExpand">
-
+            <Image Source="DerdeBg.png" HorizontalOptions="Center" HeightRequest="250"/>
+            <Frame Margin="-5" HeightRequest="250">
+                <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                        <GradientStop Color="#7F142872"
+                          Offset="0.1"/>
+                        <GradientStop Color="#7F6B1FF8"
+                          Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <Grid Padding="20" VerticalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Fietstijd (in minuten)" TextColor="White"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Maximale snelheid" TextColor="White"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Gemiddelde snelheid" TextColor="White"/>
+                    <Label Grid.Row="3" Grid.Column="0" Text="Huidige snelheid" TextColor="White"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="49 min" TextColor="White"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="47 km/u" TextColor="White"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="49 km/u" TextColor="White"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="30 km/u" TextColor="White"/>
+                </Grid>
+            </Frame>
         </StackLayout>
         <Grid BackgroundColor="#142872" VerticalOptions="End" Padding="5">
             <Grid.RowDefinitions>
