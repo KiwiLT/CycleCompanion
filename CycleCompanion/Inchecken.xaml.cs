@@ -49,21 +49,21 @@ namespace CycleCompanion
               catch(FeatureNotEnabledException fneEx) { Console.WriteLine("Feature not enabled."); }
               catch(PermissionException pEx) { Console.WriteLine("Please enable permission to get location."); }
               catch(Exception ex) { Console.WriteLine("Unable to get location"); }
-            if(myLocation != null)
-            {
-                string connectionString = Configuration.getConnectionString();
-                var connection = new MySqlConnection(connectionString);
-                connection.Open();
-                string deelnemerid = "1018958";
-                string id = "0";
-                string tijd = DateTime.Now.ToString("T");
-                string query = "INSERT INTO " +
-                    "'Locaties'(DeelnemerID, ID, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
-                    $"VALUES({deelnemerid}, {id}, {tijd}, {myLocation.Latitude}, {myLocation.Longitude});";
-                MySqlCommand command = connection.CreateCommand();
-                command.CommandText = query;
-                var reader = await command.ExecuteNonQueryAsync();
-            }
+            //if(myLocation != null)
+            //{
+            //    string connectionString = Configuration.getConnectionString();
+            //    var connection = new MySqlConnection(connectionString);
+            //    connection.Open();
+            //    string deelnemerid = "1018958";
+            //    string id = "0";
+            //    string tijd = DateTime.Now.ToString("T");
+            //    string query = "INSERT INTO " +
+            //        "'Locaties'(DeelnemerID, ID, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
+            //        $"VALUES({deelnemerid}, {id}, {tijd}, {myLocation.Latitude}, {myLocation.Longitude});";
+            //    MySqlCommand command = connection.CreateCommand();
+            //    command.CommandText = query;
+            //    var reader = await command.ExecuteNonQueryAsync();
+            //}
             
         }
     }

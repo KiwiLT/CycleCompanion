@@ -7,8 +7,8 @@ namespace CycleCompanion
     {
         public static string server = "185.182.56.245";
         public static string database = "nisatsv379_DeWielrenners";
-        public static string uid = "nisatsv379_DeWielrenners";
-        public static string password = "W7CRx5zGZ";
+        public static string uid = "nisatsv379_DeWielrenners2";
+        public static string password = "DNaiph82";
 
         public Configuration()
         {
