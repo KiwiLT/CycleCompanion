@@ -32,5 +32,15 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Statistieken());
         }
+
+        private async void Navigate_Login(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Login());
+        }
+
+        private async void Navigate_Menu(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Menu());
+        }
     }
 }
