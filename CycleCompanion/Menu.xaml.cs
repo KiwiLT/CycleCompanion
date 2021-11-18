@@ -9,7 +9,24 @@ namespace CycleCompanion
     {
         public Menu()
         {
+            BindingContext = this;
             InitializeComponent();
+            
+        }
+        public async void Navigate_Inchecken(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Inchecken());
+        }
+        public async void Navigate_Statistieken(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Statistieken());
+        }
+        public string userName
+        {
+            get
+            {
+                return "Kees";
+            }
         }
     }
 }

@@ -79,7 +79,7 @@
                 <ColumnDefinition Width="3"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" ImageSource="MenuArrowLeft.png" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" Clicked="Navigate_Main"/>
+            <Button Grid.Column="0" ImageSource="MenuArrowLeft.png" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" Clicked="Navigate_Menu"/>
             <Frame Grid.Column="1" BackgroundColor="White" HasShadow="False"/>
             <Button Grid.Column="2" Text="Profiel" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
             <Frame Grid.Column="3" BackgroundColor="White" HasShadow="False"/>
