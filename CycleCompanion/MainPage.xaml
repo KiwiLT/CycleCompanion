@@ -22,7 +22,8 @@
         </Frame>
         <Button Text="Inchecken" BackgroundColor="Gray" Clicked="Navigate_Inchecken"/>
         <Button Text="Statistieken" BackgroundColor="Gray" Clicked="Navigate_Statistieken"/>
-        
+        <Button Text="Login" BackgroundColor="Gray" Clicked="Navigate_Login"/>
+        <Button Text="Menu" BackgroundColor="Gray" Clicked="Navigate_Menu"/>
     </StackLayout>
 
 </ContentPage>
