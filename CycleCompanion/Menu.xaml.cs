@@ -21,6 +21,10 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Statistieken());
         }
+        public async void Navigate_Profiel(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Profiel());
+        }
         public string userName
         {
             get
