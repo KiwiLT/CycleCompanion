@@ -5,7 +5,7 @@
     x:Class="CycleCompanion.Menu"
     BackgroundColor="White">
     <StackLayout>
-        <Frame HeightRequest="100">
+        <Frame HeightRequest="80">
             <Frame.Background>
                 <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
@@ -16,7 +16,94 @@
                 
                 </LinearGradientBrush>
             </Frame.Background>
-                    <Label Text="Welkom" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="28"/>
+            <StackLayout>
+                <Label Text= "{Binding userName, StringFormat='Hoi {0}!'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text= "U heeft nummer 2234214" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+            </StackLayout>
         </Frame>
-        </StackLayout>
+        <Grid Padding="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fiets.png" Clicked="Navigate_Statistieken">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                   
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="klokje.png">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                   
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="check.png" Clicked="Navigate_Inchecken">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                   
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="top10.png">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                   
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                   
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="badge.png">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                   
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+         </Grid>
+        <Frame HeightRequest="20" BackgroundColor="#191B76" BorderColor="#191B76" HasShadow="False"/>
+      </StackLayout>
 </ContentPage>
