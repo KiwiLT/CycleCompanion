@@ -29,7 +29,10 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new MainPage());
         }
-
+        public async void Navigate_Menu(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Menu());
+        }
         public async void Get_Location(object sender, EventArgs e)
         {
             Location myLocation = null;
