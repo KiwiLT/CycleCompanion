@@ -18,7 +18,10 @@
             </Frame.Background>
             <StackLayout>
                 <Label Text= "{Binding userName, StringFormat='Hoi {0}!'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontAttributes="Bold"/>
-                <Label Text= "U heeft nummer 2234214" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+
+
+                <Label Text= "{Binding nummer, StringFormat ='U heeft nummer {0}'}" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+
             </StackLayout>
         </Frame>
         <Grid Padding="15">
@@ -79,7 +82,11 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+<<<<<<< HEAD
             <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png" Clicked="Navigate_Profiel" >
+=======
+            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png" Clicked="Navigate_Profiel">
+>>>>>>> cc75800c2bef15f0b39e75c85f32b7b70ab076c0
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">

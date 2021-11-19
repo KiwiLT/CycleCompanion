@@ -33,8 +33,10 @@ namespace CycleCompanion
         {
             get
             {
-                return "Kees";
+                return Profiel.naam;
             }
         }
+
+        public string nummer { get { return "" + Profiel.nummer; } }
     }
 }

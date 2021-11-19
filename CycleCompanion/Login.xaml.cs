@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using MySqlConnector;
 
 using Xamarin.Forms;
 
@@ -12,6 +13,46 @@ namespace CycleCompanion
             InitializeComponent();
             entAppName.Text = "";
         }
+
+        public void checkMail(object sender, EventArgs e)
+        {
+            string connectionString = Configuration.getConnectionString();
+            var connection = new MySqlConnection(connectionString);
+            string query = "SELECT `Email` FROM `Deelnemers`;";
+            connection.Open();
+            var cmd = new MySqlCommand(query, connection);
+            MySqlDataReader emailreader = cmd.ExecuteReader();
+            List<string> emails = new List<string>();
+            while (emailreader.Read())
+            {
+                emails.Add(emailreader.GetString(0));
+            }
+            emailreader.Close();
+            
+
+            if (emails.Contains(entAppName.Text))
+            {
+                string userinfoquery = "SELECT * FROM `Deelnemers` WHERE `Email`= '" + entAppName.Text + "';";
+                cmd = new MySqlCommand(userinfoquery, connection);
+                MySqlDataReader userinforeader = cmd.ExecuteReader();
+                userinforeader.Read();
+                Profiel.deelnemerId = userinforeader.GetInt32(0);
+                Profiel.nummer = userinforeader.GetInt32(1);
+                Profiel.naam = userinforeader.GetString(2);
+                Profiel.achternaam = userinforeader.GetString(3);
+                Profiel.email = userinforeader.GetString(4);
+
+                userinforeader.Close();
+                connection.Close();
+                Navigate_Menu(sender, e);
+            } else
+            {
+                connection.Close();
+                DisplayAlert("Onjuiste Email", "Voer alstublieft het email address van een deelnemer in.", "Ok");
+            }
+
+        }
+
         public async void Navigate_Menu(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Menu());
