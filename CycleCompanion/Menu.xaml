@@ -82,11 +82,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-<<<<<<< HEAD
             <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png" Clicked="Navigate_Profiel" >
-=======
-            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png" Clicked="Navigate_Profiel">
->>>>>>> cc75800c2bef15f0b39e75c85f32b7b70ab076c0
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
@@ -111,7 +107,6 @@
                 </Button.Background>
             </Button>
          </Grid>
-        <!--<Frame HeightRequest="20" BackgroundColor="#191B76" BorderColor="#191B76" HasShadow="False"/>-->
         <Grid BackgroundColor="#142872" VerticalOptions="End" Padding="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
