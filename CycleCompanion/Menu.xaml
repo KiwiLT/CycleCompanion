@@ -79,7 +79,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png">
+            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png" Clicked="Navigate_Profiel" >
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
