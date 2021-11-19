@@ -57,13 +57,19 @@ namespace CycleCompanion
                 string connectionString = Configuration.getConnectionString();
                 var connection = new MySqlConnection(connectionString);
                 connection.Open();
-                string deelnemerid = "1018958";
-                string id = "6";
+                string getlocid = "SELECT MAX(`LocatieID`) FROM `Locaties`";
+                MySqlCommand maxloccommand = new MySqlCommand(getlocid, connection);
+                MySqlDataReader locreader = maxloccommand.ExecuteReader();
+                locreader.Read();
+                string deelnemerid = "2";
+                string locatieId = "" + (locreader.GetInt32(0) + 1);
+                locreader.Close();
                 //DateTime tijd = '17:21:38";
                 string tijd = DateTime.Now.ToString("HH:mm:ss");
                 string query = "INSERT INTO " +
-                    "`Locaties`(`DeelnemerID`, `ID`, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
-                    $"VALUES({deelnemerid}, {id}, {tijd}, {myLocation.Latitude}, {myLocation.Longitude});";
+                    "`Locaties`(`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
+                    $"VALUES({deelnemerid}, {locatieId}, '{tijd}', {myLocation.Latitude}, {myLocation.Longitude});";
+                Console.WriteLine(query);
                 //string query = "INSERT INTO `Locaties` (`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`) VALUES (1,5,'15:21:38',12.3728,1.8936);";
                 MySqlCommand command = connection.CreateCommand();
                 command.CommandText = query;
