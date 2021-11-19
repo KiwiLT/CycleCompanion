@@ -17,7 +17,7 @@
                 </LinearGradientBrush>
             </Frame.Background>
             <StackLayout>
-                <Label Text= "{Binding userName, StringFormat='Hoi {0}!'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text= "{Binding userName, StringFormat='Hoi {0}!'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontAttributes="Bold"/>
                 <Label Text= "U heeft nummer 2234214" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
             </StackLayout>
         </Frame>
@@ -31,7 +31,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fiets.png" Clicked="Navigate_Statistieken">
+            <Button Grid.Row="0" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fiets.png" Clicked="Navigate_Statistieken" Padding="40">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
@@ -44,7 +44,7 @@
                 </Button.Background>
             </Button>
             <Button Grid.Row="0" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="klokje.png">
-                <Button.Background>
+                <Button.Background Padding="100">
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
                     <GradientStop Color="#142872"
@@ -55,7 +55,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="1" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="check.png" Clicked="Navigate_Inchecken">
+            <Button Grid.Row="1" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="checkin.png" Clicked="Navigate_Inchecken">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
@@ -79,7 +79,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png">
+            <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Margin="10" ImageSource="fietshelm.png" Clicked="Navigate_Profiel">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
@@ -104,6 +104,15 @@
                 </Button.Background>
             </Button>
          </Grid>
-        <Frame HeightRequest="20" BackgroundColor="#191B76" BorderColor="#191B76" HasShadow="False"/>
+        <!--<Frame HeightRequest="20" BackgroundColor="#191B76" BorderColor="#191B76" HasShadow="False"/>-->
+        <Grid BackgroundColor="#142872" VerticalOptions="End" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Log uit" Font="Bold" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None" Clicked="Navigate_Login"/>
+            </Grid>
       </StackLayout>
 </ContentPage>

@@ -11,7 +11,7 @@ namespace CycleCompanion
         {
             BindingContext = this;
             InitializeComponent();
-            
+
         }
         public async void Navigate_Inchecken(object sender, EventArgs e)
         {
@@ -20,6 +20,14 @@ namespace CycleCompanion
         public async void Navigate_Statistieken(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Statistieken());
+        }
+        public async void Navigate_Profiel(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Profiel());
+        }
+        private async void Navigate_Login(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Login());
         }
         public string userName
         {

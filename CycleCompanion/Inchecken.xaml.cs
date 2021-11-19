@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using MySqlConnector;
 
 namespace CycleCompanion
 {
@@ -34,6 +35,7 @@ namespace CycleCompanion
         }
         public async void Get_Location(object sender, EventArgs e)
         {
+            Location myLocation = null;
             try
             {
                 var location = await Geolocation.GetLastKnownLocationAsync();
@@ -43,13 +45,29 @@ namespace CycleCompanion
                                       $"Longitude: {location.Longitude}\n" +
                                       $"Altitude: {location.Altitude}\n" +
                                       $"Speed: {location.Speed}\n");
+                    myLocation = location;
+                    
                 }
             } catch (FeatureNotSupportedException fnsEx) { Console.WriteLine("Feature not supported."); }
               catch(FeatureNotEnabledException fneEx) { Console.WriteLine("Feature not enabled."); }
               catch(PermissionException pEx) { Console.WriteLine("Please enable permission to get location."); }
               catch(Exception ex) { Console.WriteLine("Unable to get location"); }
-
-            Console.WriteLine("My location");
+            //if(myLocation != null)
+            //{
+            //    string connectionString = Configuration.getConnectionString();
+            //    var connection = new MySqlConnection(connectionString);
+            //    connection.Open();
+            //    string deelnemerid = "1018958";
+            //    string id = "0";
+            //    string tijd = DateTime.Now.ToString("T");
+            //    string query = "INSERT INTO " +
+            //        "'Locaties'(DeelnemerID, ID, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
+            //        $"VALUES({deelnemerid}, {id}, {tijd}, {myLocation.Latitude}, {myLocation.Longitude});";
+            //    MySqlCommand command = connection.CreateCommand();
+            //    command.CommandText = query;
+            //    var reader = await command.ExecuteNonQueryAsync();
+            //}
+            
         }
     }
 }
