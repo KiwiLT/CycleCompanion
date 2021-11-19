@@ -11,9 +11,9 @@ namespace CycleCompanion
         {
             InitializeComponent();
         }
-        public async void Navigate_Main(object sender, EventArgs e)
+        public async void Navigate_Menu(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushModalAsync(new Menu());
         }
     }
 }
