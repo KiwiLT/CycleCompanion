@@ -19,7 +19,7 @@ namespace CycleCompanion
         {
             get
             {
-                return "Kees";
+                return Profiel.naam;
             }
         }
         public Inchecken()
