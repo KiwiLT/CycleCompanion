@@ -64,7 +64,7 @@ namespace CycleCompanion
                 catch (Exception ex) { Console.WriteLine("Unable to get location"); }
                 if (myLocation != null)
                 {
-                    string deelnemerid = "2";
+                    string deelnemerid = "" + Profiel.deelnemerId;
                     string tijd = DateTime.Now.ToString("HH:mm:ss");
                     string query = "INSERT INTO " +
                         "`Locaties`(`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +

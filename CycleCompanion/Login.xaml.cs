@@ -32,7 +32,17 @@ namespace CycleCompanion
 
             if (emails.Contains(entAppName.Text))
             {
-                string userinfoquery = "SELECT * FROM `Deelnemers WHERE `Email`= " + entAppName.Text + ";";
+                string userinfoquery = "SELECT * FROM `Deelnemers` WHERE `Email`= '" + entAppName.Text + "';";
+                cmd = new MySqlCommand(userinfoquery, connection);
+                MySqlDataReader userinforeader = cmd.ExecuteReader();
+                userinforeader.Read();
+                Profiel.deelnemerId = userinforeader.GetInt32(0);
+                Profiel.nummer = userinforeader.GetInt32(1);
+                Profiel.naam = userinforeader.GetString(2);
+                Profiel.achternaam = userinforeader.GetString(3);
+                Profiel.email = userinforeader.GetString(4);
+
+                userinforeader.Close();
                 connection.Close();
                 Navigate_Menu(sender, e);
             } else

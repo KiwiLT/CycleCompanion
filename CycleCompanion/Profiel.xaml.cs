@@ -7,6 +7,13 @@ namespace CycleCompanion
 {
     public partial class Profiel : ContentPage
     {
+        public static int deelnemerId { get; set; }
+        public static int nummer { get; set; }
+        public static string naam { get; set; }
+        public static string achternaam { get; set; }
+        public static string email { get; set; }
+
+
         public Profiel()
         {
             InitializeComponent();
