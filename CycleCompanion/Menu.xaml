@@ -18,7 +18,10 @@
             </Frame.Background>
             <StackLayout>
                 <Label Text= "{Binding userName, StringFormat='Hoi {0}!'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontAttributes="Bold"/>
+
+
                 <Label Text= "{Binding nummer, StringFormat ='U heeft nummer {0}'}" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+
             </StackLayout>
         </Frame>
         <Grid Padding="15">

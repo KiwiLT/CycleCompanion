@@ -46,7 +46,7 @@ namespace CycleCompanion
             {
                 Location myLocation = null;
                 try
-                {
+                {  
                     var location = await Geolocation.GetLastKnownLocationAsync();
                     if (location != null)
                     {

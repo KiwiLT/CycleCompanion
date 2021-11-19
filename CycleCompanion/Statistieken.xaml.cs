@@ -28,5 +28,9 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Menu());
         }
+        public async void Navigate_Profiel(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Profiel());
+        }
     }
 }
