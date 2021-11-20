@@ -7,14 +7,6 @@ namespace CycleCompanion
 {
     public partial class Statistieken : ContentPage
     {
-        public string nummer
-        {
-            get
-            {
-                return "1018958";
-            }
-        }
-
         public Statistieken()
         {
             InitializeComponent();
