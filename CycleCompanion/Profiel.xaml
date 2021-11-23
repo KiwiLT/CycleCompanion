@@ -57,16 +57,16 @@
                     <RowDefinition Height="2"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Text="Naam:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="Kees"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="{Binding naam}"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="1" BackgroundColor="Black"/>
                 <Label Grid.Column="0" Grid.Row="2" Text="Achternaam:" FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="2" Text="Post" FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="2" Text="{Binding achternaam}" FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="Black"/>
                 <Label Grid.Column="0" Grid.Row="4" Text="Geboortedatum:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
                 <Label Grid.Column="1" Grid.Row="4" Text="04-05-1979"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="5" BackgroundColor="Black"/>
                 <Label Grid.Column="0" Grid.Row="6" Text="Email:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="6" Text="Kees.post@gmail.com"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="6" Text="{Binding email}"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="7" BackgroundColor="Black"/>
 
 

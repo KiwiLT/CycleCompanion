@@ -17,7 +17,9 @@ namespace CycleCompanion
 
         public Profiel()
         {
+            
             InitializeComponent();
+            this.BindingContext = this;
         }
         public async void Navigate_Menu(object sender, EventArgs e)
         {
