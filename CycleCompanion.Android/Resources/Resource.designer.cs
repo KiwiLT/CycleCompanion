@@ -11832,6 +11832,9 @@ namespace CycleCompanion.Droid
 			// aapt resource value: 0x7F07009E
 			public const int VierdeBg = 2131165342;
 			
+			// aapt resource value: 0x7F07009F
+			public const int voorkantfiets = 2131165343;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

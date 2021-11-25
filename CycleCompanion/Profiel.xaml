@@ -39,7 +39,7 @@
         <StackLayout BackgroundColor="White" Padding="10" Margin="-5">
             <Label Grid.Column="0" Text="{Binding pnummer, StringFormat='Nummer {0}'}"  FontFamily="Montserrat" FontAttributes="Bold" TextColor="Black" FontSize="44"/>
         </StackLayout>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10" VerticalOptions="FillAndExpand" >
             <Grid VerticalOptions="FillAndExpand">
 
                 <Grid.ColumnDefinitions>
@@ -66,7 +66,7 @@
 
 
             </Grid>
-            <Image HorizontalOptions="Start" Source="VoorkantFiets.png" Margin="0, 0, 10, 0" HeightRequest="150"/>
+            <Image HorizontalOptions="Start" Source="VoorkantFiets.png" Margin="-5, 20, 10, -5" HeightRequest="150"/>
 
 
         </StackLayout>
