@@ -108,6 +108,7 @@
     <AndroidResource Include="Resources\drawable\loginbalk.png">
       <SubType></SubType>
       <Generator></Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\FietsInlogPage.png">
       <SubType></SubType>
