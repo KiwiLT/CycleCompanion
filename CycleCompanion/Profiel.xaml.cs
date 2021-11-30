@@ -15,9 +15,16 @@ namespace CycleCompanion
         public static string achternaam { get; set; }
         public static string email { get; set; }
 
+        public string pnaam { get { return naam; } }
+        public string pachternaam { get { return achternaam; } }
+        public string pemail { get { return email; } }
+        public string pnummer { get { return "" + nummer; } }
+        public string pvolnaam { get { return naam + " " + achternaam; } }
+
         public Profiel()
         {
             InitializeComponent();
+            BindingContext = this;
         }
         public async void Navigate_Menu(object sender, EventArgs e)
         {

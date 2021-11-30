@@ -32,14 +32,14 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Text="Kees Post"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="48" Margin="15, 30, 0, 0" />
+                <Label Grid.Column="0" Text="{Binding pvolnaam}"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="48" Margin="15, 30, 0, 0" />
                 <Image Grid.Column="1" Source="Profiel.png" Margin="0, 0, 10, 0" HeightRequest="130"/>
             </Grid>
         </Frame>
         <StackLayout BackgroundColor="White" Padding="10" Margin="-5">
-            <Label Grid.Column="0" Text="Nummer 234322"  FontFamily="Montserrat" FontAttributes="Bold" TextColor="Black" FontSize="44"/>
+            <Label Grid.Column="0" Text="{Binding pnummer, StringFormat='Nummer {0}'}"  FontFamily="Montserrat" FontAttributes="Bold" TextColor="Black" FontSize="44"/>
         </StackLayout>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10" VerticalOptions="FillAndExpand" >
             <Grid VerticalOptions="FillAndExpand">
 
                 <Grid.ColumnDefinitions>
@@ -53,25 +53,20 @@
                     <RowDefinition Height="2"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="2"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="2"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Text="Naam:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="Kees"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="{Binding pnaam}"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="1" BackgroundColor="Black"/>
                 <Label Grid.Column="0" Grid.Row="2" Text="Achternaam:" FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="2" Text="Post" FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="2" Text="{Binding pachternaam}" FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="Black"/>
-                <Label Grid.Column="0" Grid.Row="4" Text="Geboortedatum:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="4" Text="04-05-1979"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="0" Grid.Row="4" Text="Email:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="4" Text="{Binding pemail}"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
                 <Frame Grid.ColumnSpan="2" Grid.Row="5" BackgroundColor="Black"/>
-                <Label Grid.Column="0" Grid.Row="6" Text="Email:"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" FontSize="18" Margin="10, 10, 0, 0" TextColor="Black"/>
-                <Label Grid.Column="1" Grid.Row="6" Text="Kees.post@gmail.com"  FontFamily="Montserrat" HorizontalTextAlignment="Right" FontSize="18" Margin="15, 15, 0, 0" TextColor="Black"/>
-                <Frame Grid.ColumnSpan="2" Grid.Row="7" BackgroundColor="Black"/>
 
 
             </Grid>
-            <Image HorizontalOptions="Start" Source="VoorkantFiets.png" Margin="0, 0, 10, 0" HeightRequest="150"/>
+            <Image HorizontalOptions="Start" Source="VoorkantFiets.png" Margin="-5, 20, 10, -5" HeightRequest="150"/>
 
 
         </StackLayout>

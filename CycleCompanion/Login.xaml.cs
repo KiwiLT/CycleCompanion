@@ -41,7 +41,23 @@ namespace CycleCompanion
                 Profiel.naam = userinforeader.GetString(2);
                 Profiel.achternaam = userinforeader.GetString(3);
                 Profiel.email = userinforeader.GetString(4);
-
+                try
+                {
+                    Statistieken.begintijd = (DateTime)userinforeader.GetMySqlDateTime(5);
+                }
+                catch
+                {
+                    Statistieken.begintijd = default(DateTime);
+                }
+                try
+                {
+                    Statistieken.eindtijd = (DateTime)userinforeader.GetMySqlDateTime(6);
+                }
+                catch
+                {
+                    Statistieken.eindtijd = default(DateTime);
+                }
+                
                 userinforeader.Close();
                 connection.Close();
                 Navigate_Menu(sender, e);
