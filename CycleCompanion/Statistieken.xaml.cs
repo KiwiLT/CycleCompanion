@@ -7,8 +7,6 @@ namespace CycleCompanion
 {
     public partial class Statistieken : ContentPage
     {
-<<<<<<< HEAD
-=======
         public static DateTime begintijd { get; set; }
         public static DateTime eindtijd { get; set; }
         public static int gemsnelheid { get; set; }
@@ -45,8 +43,6 @@ namespace CycleCompanion
                 return "" + Profiel.nummer;
             }
         }
-
->>>>>>> LiangTong
         public Statistieken()
         {
             BindingContext = this;
