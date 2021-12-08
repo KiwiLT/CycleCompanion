@@ -9,8 +9,9 @@ namespace CycleCompanion
     {
         public static DateTime begintijd { get; set; }
         public static DateTime eindtijd { get; set; }
-        public static int gemsnelheid { get; set; }
-        public static int maxsnelheid { get; set; }
+        public static double gemsnelheid { get; set; }
+        public static double huidigesnelheid { get; set; }
+        public static double maxsnelheid { get; set; }
         public static double afstand { get; set; }
 
         public string sbegintijd
@@ -21,6 +22,16 @@ namespace CycleCompanion
         public string seindtijd
         {
             get { if (eindtijd != default(DateTime)) { return eindtijd.ToString("HH:mm"); } else { return "..."; } }
+        }
+
+        public string shuidigesnelheid
+        {
+            get { return Math.Round(huidigesnelheid, 2) + " km/u"; }
+        }
+
+        public string smaxsnelheid
+        {
+            get { return Math.Round(maxsnelheid, 2) + " km/u"; }
         }
 
         public string fietstijd

@@ -52,9 +52,9 @@ Offset="1.0"/>
                     <Label Grid.Row="2" Grid.Column="0" Text="Gemiddelde snelheid" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
                     <Label Grid.Row="3" Grid.Column="0" Text="Huidige snelheid" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding fietstijd}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
-                    <Label Grid.Row="1" Grid.Column="1" Text="47 km/u" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding smaxsnelheid}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
                     <Label Grid.Row="2" Grid.Column="1" Text="49 km/u" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
-                    <Label Grid.Row="3" Grid.Column="1" Text="30 km/u" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding shuidigesnelheid}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="8"/>
                 </Grid>
             </Frame>
         </StackLayout>
