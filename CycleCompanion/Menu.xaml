@@ -70,7 +70,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="1" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="top10.png">
+            <Button Grid.Row="1" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="top10.png" Clicked="Navigate_Top10">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
@@ -94,7 +94,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="2" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="badge.png">
+            <Button Grid.Row="2" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="badge.png" Clicked="Navigate_Badge">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">

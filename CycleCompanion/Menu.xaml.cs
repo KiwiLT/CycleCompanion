@@ -29,6 +29,16 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Login());
         }
+        private async void Navigate_Top10(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Top10());
+        }
+        private async void Navigate_Badge(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Badge());
+        }
+
+
         public string userName
         {
             get
