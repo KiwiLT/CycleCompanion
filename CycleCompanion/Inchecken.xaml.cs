@@ -13,7 +13,7 @@ namespace CycleCompanion
 {
     public partial class Inchecken : ContentPage
     {
-        public bool ingechecked { get; set; }
+        public static bool ingechecked { get; set; }
 
         public string userName
         {
@@ -38,6 +38,7 @@ namespace CycleCompanion
         }
         public void CheckInButton(object sender, EventArgs e)
         {
+            DisplayAlert("Ingechecked!", "U bent nu ingechecked. Uw tijd loopt en uw locatie is zichtbaar.", "Ok");
             Thread tOne = new Thread(backgroundLocation);
             tOne.Start();
 
@@ -55,16 +56,18 @@ namespace CycleCompanion
                 Statistieken.Update_Data();
                 string connectionString = Configuration.getConnectionString();
                 var connection = new MySqlConnection(connectionString);
-                //await DisplayAlert("Ingechecked!", "U bent nu ingechecked. Uw tijd loopt en uw locatie is zichtbaar.", "Ok");
                 connection.Open();
                 Location previousLocation = null;
-                DateTime previousTime;
+                Location myLocation;
+                DateTime previousTime = DateTime.Now;
+                DateTime currentTime;
                 while (ingechecked)
                 {
-                    Location myLocation = null;
+                    myLocation = null;
                     try
                     {
-                        var location = await Geolocation.GetLastKnownLocationAsync();
+                        var request = new GeolocationRequest(GeolocationAccuracy.Best);
+                        var location = await Geolocation.GetLocationAsync(request);
                         if (location != null)
                         {
                             Console.WriteLine($"Latitude: {location.Latitude}\n" +
@@ -72,6 +75,10 @@ namespace CycleCompanion
                                               $"Altitude: {location.Altitude}\n" +
                                               $"Speed: {location.Speed}\n");
                             myLocation = location;
+                            if (previousLocation == null)
+                            {
+                                previousLocation = location;
+                            }
 
                         }
                     }
@@ -110,8 +117,8 @@ namespace CycleCompanion
                     if (myLocation != null)
                     {
                         string deelnemerid = "" + Profiel.deelnemerId;
-                        previousTime = DateTime.Now;
-                        string tijd = previousTime.ToString("HH:mm:ss");
+                        currentTime = DateTime.Now;
+                        string tijd = currentTime.ToString("HH:mm:ss");
                         string query = "INSERT INTO " +
                             "`Locaties`(`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
                             $"VALUES({deelnemerid}, NULL, '{tijd}', {myLocation.Latitude}, {myLocation.Longitude});";
@@ -119,11 +126,28 @@ namespace CycleCompanion
                         MySqlCommand command = connection.CreateCommand();
                         command.CommandText = query;
                         var reader = command.ExecuteNonQuery();
+                        calculateSpeed(currentTime, previousTime, previousLocation, myLocation);
                         previousLocation = myLocation;
+                        previousTime = currentTime;
                         Thread.Sleep(5000);
                     }
                 }
+                Statistieken.huidigesnelheid = 0;
+                Statistieken.eindtijd = DateTime.Now;
+                Statistieken.Update_Data();
                 connection.Close();
+            }
+        }
+
+        public void calculateSpeed(DateTime currentTime, DateTime previousTime, Location previousLocation, Location CurrentLocation)
+        {
+            double distance = CurrentLocation.CalculateDistance(previousLocation, DistanceUnits.Kilometers);
+            double timepass = (currentTime - previousTime).TotalHours;
+            double speed = distance / timepass;
+            Statistieken.huidigesnelheid = speed;
+            if (speed > Statistieken.maxsnelheid)
+            {
+                Statistieken.maxsnelheid = speed;
             }
         }
 
