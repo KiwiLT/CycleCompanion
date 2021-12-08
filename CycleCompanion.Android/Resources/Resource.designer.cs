@@ -11719,7 +11719,7 @@ namespace CycleCompanion.Droid
 			public const int LocationIcon = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int loginbalk = 2131165305;
+			public const int Loginbalk = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
 			public const int material_ic_calendar_black_24dp = 2131165306;

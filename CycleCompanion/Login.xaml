@@ -26,7 +26,7 @@
                 <Label HeightRequest="10"/>
                 <Entry x:Name="entAppName" Placeholder="E-mail adress" Keyboard="Email" IsVisible="True"/> 
 
-                <Button ImageSource="loginbalk" Scale="1.0" BackgroundColor="Transparent" Clicked="checkMail"/>
+                <Button ImageSource="Loginbalk.png" Scale="1.0" BackgroundColor="Transparent" Clicked="checkMail"/>
                 
                
             </StackLayout>
