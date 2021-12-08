@@ -34,6 +34,11 @@ namespace CycleCompanion
             get { return Math.Round(maxsnelheid, 2) + " km/u"; }
         }
 
+        public string sgemsnelheid
+        {
+            get { return Math.Round(gemsnelheid, 2) + " km/u"; }
+        }
+
         public string fietstijd
         {
             get {
@@ -71,7 +76,7 @@ namespace CycleCompanion
             else { beginstring = begintijd.ToString("yyyy/MM/dd HH:mm:ss"); }
             if (eindtijd == default(DateTime)) { eindstring = "null"; }
             else { eindstring = eindtijd.ToString("yyyy/MM/dd HH:mm:ss"); }
-            string query = "UPDATE `Deelnemers` SET `BeginTijd` = '" + beginstring + "', `EindTijd` = '" + eindstring + "' WHERE `ID` = '" + Profiel.deelnemerId + "';";
+            string query = "UPDATE `Deelnemers` SET `BeginTijd` = '" + beginstring + "', `EindTijd` = '" + eindstring + "', `MaximaleSnelheid` = '" + Statistieken.maxsnelheid + "', `AfstandGefietst` = '" + afstand + "', `GemiddeldeSnelheid` = '" + gemsnelheid + "' WHERE `ID` = '" + Profiel.deelnemerId + "';";
             Console.WriteLine(query);
             MySqlCommand command = connection.CreateCommand();
             command.CommandText = query;

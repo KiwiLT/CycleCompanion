@@ -15,6 +15,8 @@ namespace CycleCompanion
     {
         public static bool ingechecked { get; set; }
 
+        public static Location startLocation { get; set; }
+
         public string userName
         {
             get
@@ -38,7 +40,11 @@ namespace CycleCompanion
         }
         public void CheckInButton(object sender, EventArgs e)
         {
-            DisplayAlert("Ingechecked!", "U bent nu ingechecked. Uw tijd loopt en uw locatie is zichtbaar.", "Ok");
+            if (ingechecked == false)
+            {
+                DisplayAlert("Ingechecked!", "U bent nu ingechecked. Uw tijd loopt en uw locatie is zichtbaar.", "Ok");
+            }
+            
             Thread tOne = new Thread(backgroundLocation);
             tOne.Start();
 
@@ -52,6 +58,7 @@ namespace CycleCompanion
             if (ingechecked == false)
             {
                 ingechecked = true;
+                startLocation = null;
                 Statistieken.begintijd = DateTime.Now;
                 Statistieken.Update_Data();
                 string connectionString = Configuration.getConnectionString();
@@ -78,6 +85,10 @@ namespace CycleCompanion
                             if (previousLocation == null)
                             {
                                 previousLocation = location;
+                            }
+                            if (startLocation == null)
+                            {
+                                startLocation = location;
                             }
 
                         }
@@ -130,6 +141,7 @@ namespace CycleCompanion
                         previousLocation = myLocation;
                         previousTime = currentTime;
                         Thread.Sleep(5000);
+                        Statistieken.Update_Data();
                     }
                 }
                 Statistieken.huidigesnelheid = 0;
@@ -149,6 +161,10 @@ namespace CycleCompanion
             {
                 Statistieken.maxsnelheid = speed;
             }
+            double gemdistance = CurrentLocation.CalculateDistance(startLocation, DistanceUnits.Kilometers);
+            double gemtimepass = (currentTime - Statistieken.begintijd).TotalHours;
+            Statistieken.gemsnelheid = gemdistance / gemtimepass;
+            Statistieken.afstand = gemdistance;
         }
 
         public void CheckOutButton(object sender, EventArgs e)
