@@ -84,6 +84,7 @@
     <AndroidResource Include="Resources\drawable\LocationIcon.png">
       <SubType></SubType>
       <Generator></Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\check.png">
       <SubType></SubType>
@@ -105,7 +106,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\loginbalk.png">
+    <AndroidResource Include="Resources\drawable\Loginbalk.png">
       <SubType></SubType>
       <Generator></Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -117,6 +118,7 @@
     <AndroidResource Include="Resources\drawable\Fiets.png">
       <SubType></SubType>
       <Generator></Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\klokje.png">
       <SubType></SubType>

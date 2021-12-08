@@ -49,6 +49,25 @@ namespace CycleCompanion
             InitializeComponent();
         }
 
+        public static void Update_Data()
+        {
+            string connectionString = Configuration.getConnectionString();
+            var connection = new MySqlConnection(connectionString);
+            connection.Open();
+            string beginstring = "";
+            string eindstring = "";
+            if (begintijd == default(DateTime)) { beginstring = "null"; }
+            else { beginstring = begintijd.ToString("yyyy/MM/dd HH:mm:ss"); }
+            if (eindtijd == default(DateTime)) { eindstring = "null"; }
+            else { eindstring = eindtijd.ToString("yyyy/MM/dd HH:mm:ss"); }
+            string query = "UPDATE `Deelnemers` SET `BeginTijd` = '" + beginstring + "', `EindTijd` = '" + eindstring + "' WHERE `ID` = '" + Profiel.deelnemerId + "';";
+            Console.WriteLine(query);
+            MySqlCommand command = connection.CreateCommand();
+            command.CommandText = query;
+            var reader = command.ExecuteNonQuery();
+            connection.Close();
+        }
+
         public async void Navigate_Main(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new MainPage());

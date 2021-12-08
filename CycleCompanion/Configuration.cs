@@ -5,10 +5,10 @@ namespace CycleCompanion
 {
     public class Configuration
     {
-        public static string server = "34.70.112.36";
-        public static string database = "wielrenners";
-        public static string uid = "db-user";
-        public static string password = "SABu9eb";
+        public static string server = "185.182.56.245";
+        public static string database = "nisatsv379_DeWielrenners";
+        public static string uid = "nisatsv379_wielrenner";
+        public static string password = "dsFMJ940fd";
 
         public Configuration()
         {
