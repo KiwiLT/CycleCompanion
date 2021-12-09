@@ -20,7 +20,7 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Text="Top10 Snelheid"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="30" />
+                <Label Grid.Column="0" Text="Snelheid"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="30" />
                 <Image Grid.Column="1" Source="top10.png" Margin="0, 0, 10, 0" HeightRequest="130"/>
             </Grid>
             
