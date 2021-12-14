@@ -41,10 +41,7 @@ namespace CycleCompanion
         public void CheckInButton(object sender, EventArgs e)
         {
 
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                backgroundLocation();
-            });
+            backgroundLocation();
             
 
         }

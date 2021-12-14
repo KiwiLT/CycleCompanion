@@ -57,8 +57,8 @@ namespace CycleCompanion
                 {
                     Statistieken.eindtijd = default(DateTime);
                 }
-                Statistieken.gemsnelheid = userinforeader.GetDouble(7);
-                Statistieken.maxsnelheid = userinforeader.GetDouble(8);
+                Statistieken.gemsnelheid = userinforeader.GetInt32(7);
+                Statistieken.maxsnelheid = userinforeader.GetInt32(8);
                 Statistieken.afstand = userinforeader.GetDouble(9);
                 Badge.hasBadgeOne = userinforeader.GetInt16(10) == 1;
                 userinforeader.Close();
