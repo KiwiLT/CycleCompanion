@@ -7,6 +7,8 @@ namespace CycleCompanion
 {
     public partial class Badge : ContentPage
     {
+        public static bool hasBadgeOne { get; set; }
+
         public Badge()
         {
             InitializeComponent();
