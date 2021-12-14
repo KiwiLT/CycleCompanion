@@ -37,32 +37,32 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <StackLayout Grid.Column="0" Grid.Row="0" Margin="10">
+            <StackLayout Grid.Column="0" Grid.Row="0" Margin="0" Opacity="{Binding BadgeOne}">
                 <Image Source="badgepurple.png"/>
                 <Label Text="wat leuk dat u mee doet!" TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />
             </StackLayout>
 
-            <StackLayout Grid.Column="1" Grid.Row="0" Margin="10" Opacity="0.5">
+            <StackLayout Grid.Column="1" Grid.Row="0" Margin="0" Opacity="{Binding BadgeTwo}">
                 <Image Source="fietspurple.png"/>
                 <Label Text="u heeft de 40 km/u bereikt!" TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="1" Margin="10" Opacity="0.5">
+            <StackLayout Grid.Column="0" Grid.Row="1" Margin="0" Opacity="{Binding BadgeThree}">
                 <Image Source="locatiepurple.png" />
                 <Label Text="u fiets al 50km!" TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />   
             </StackLayout>
 
-            <StackLayout Grid.Column="1" Grid.Row="1" Margin="10" Opacity="0.5">
+            <StackLayout Grid.Column="1" Grid.Row="1" Margin="0" Opacity="{Binding BadgeFour}">
                 <Image Source="locatiepurple.png" />
                 <Label Text="u fiets al 100km!" TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />   
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Margin="10" Opacity="0.5">
+            <StackLayout Grid.Column="0" Grid.Row="2" Margin="0" Opacity="{Binding BadgeFive}">
                 <Image Source="wekkerpurple.png" />
                 <Label Text="u fietst al 1 uur zonder te stoppen!" TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />   
             </StackLayout>
 
-            <StackLayout Grid.Column="1" Grid.Row="2" Margin="10" Opacity="0.5">
+            <StackLayout Grid.Column="1" Grid.Row="2" Margin="0" Opacity="{Binding BadgeSix}">
                 <Image Source="mappurple.png" />
                 <Label Text="u heeft de hele tour al meegedaan! Wat tof." TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />   
             </StackLayout>

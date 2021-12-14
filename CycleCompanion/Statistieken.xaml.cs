@@ -39,6 +39,11 @@ namespace CycleCompanion
             get { return Math.Round(gemsnelheid, 2) + " km/u"; }
         }
 
+        public string safstand
+        {
+            get { return Math.Round(afstand, 2) + " km"; }
+        }
+
         public string fietstijd
         {
             get {

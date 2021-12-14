@@ -22,7 +22,7 @@ Offset="1.0"/>
                 <Image Grid.Column="0" Grid.Row="0" Source="VierdeBg.png" HorizontalOptions="Center" HeightRequest="250"/>
                 <StackLayout Grid.Column="0" Grid.Row="0">
                     <Label Margin="0, 60, 0, 0" HorizontalOptions="Center" Text="Uw afgelegde route is:" TextColor="White" FontSize="20" FontAttributes="Bold"/>
-                    <Label HorizontalOptions="Center" Text="20 km" TextColor="White" FontSize="40" FontAttributes="Bold"/>
+                    <Label HorizontalOptions="Center" Text="{Binding safstand}" TextColor="White" FontSize="40" FontAttributes="Bold"/>
                 </StackLayout>
 
             </Grid>
