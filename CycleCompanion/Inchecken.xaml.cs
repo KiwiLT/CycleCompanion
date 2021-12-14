@@ -40,14 +40,12 @@ namespace CycleCompanion
         }
         public void CheckInButton(object sender, EventArgs e)
         {
-            if (ingechecked == false)
-            {
-                DisplayAlert("Ingechecked!", "U bent nu ingechecked. Uw tijd loopt en uw locatie is zichtbaar.", "Ok");
-            }
-            
-            Thread tOne = new Thread(backgroundLocation);
-            tOne.Start();
 
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                backgroundLocation();
+            });
+            
 
         }
 
@@ -60,7 +58,6 @@ namespace CycleCompanion
                 ingechecked = true;
                 startLocation = null;
                 Statistieken.begintijd = DateTime.Now;
-                Statistieken.Update_Data();
                 string connectionString = Configuration.getConnectionString();
                 var connection = new MySqlConnection(connectionString);
                 connection.Open();
@@ -85,6 +82,7 @@ namespace CycleCompanion
                             if (previousLocation == null)
                             {
                                 previousLocation = location;
+                                await DisplayAlert("Ingechecked!", "U bent nu ingechecked. Uw tijd loopt en uw locatie is zichtbaar.", "Ok");
                             }
                             if (startLocation == null)
                             {
@@ -114,8 +112,8 @@ namespace CycleCompanion
                         Console.WriteLine("Please enable permission to get location.");
                         await DisplayAlert("Permission error", "Please enable permission to access location", "Ok");
                         ingechecked = false;
-                        connection.Close();
                         await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+                        connection.Close();
                         break;
                     }
                     catch (Exception ex)
