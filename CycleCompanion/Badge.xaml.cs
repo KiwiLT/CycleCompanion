@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Net.Mail;
 using Xamarin.Forms;
 
 namespace CycleCompanion
@@ -16,7 +16,8 @@ namespace CycleCompanion
                 if (Statistieken.begintijd != default(DateTime))
                 {
                     return "1.0";
-                } else
+                }
+                else
                 {
                     return "0.5";
                 }
@@ -30,7 +31,8 @@ namespace CycleCompanion
                 if (Statistieken.maxsnelheid >= 40.0)
                 {
                     return "1.0";
-                } else
+                }
+                else
                 {
                     return "0.5";
                 }
@@ -43,7 +45,8 @@ namespace CycleCompanion
                 if (Statistieken.afstand >= 50.0)
                 {
                     return "1.0";
-                } else
+                }
+                else
                 {
                     return "0.5";
                 }
@@ -57,7 +60,8 @@ namespace CycleCompanion
                 if (Statistieken.afstand >= 100.0)
                 {
                     return "1.0";
-                } else
+                }
+                else
                 {
                     return "0.5";
                 }
@@ -70,7 +74,8 @@ namespace CycleCompanion
                 if (Statistieken.begintijd - Statistieken.eindtijd > TimeSpan.FromHours(1.0))
                 {
                     return "1.0";
-                } else
+                }
+                else
                 {
                     return "0.5";
                 }
@@ -84,7 +89,8 @@ namespace CycleCompanion
                 if (Statistieken.eindtijd != default(DateTime))
                 {
                     return "1.0";
-                } else
+                }
+                else
                 {
                     return "0.5";
                 }
@@ -107,6 +113,34 @@ namespace CycleCompanion
         public async void Navigate_Profiel(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Profiel());
+        }
+        void btnSend_Clicked(object sender, System.EventArgs e)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("mail.dewielrenners.com");
+
+                mail.From = new MailAddress("info@dewielrenners.com");
+                string mailTo = "nisatutucu@gmail.com";
+                mail.To.Add(mailTo);
+                mail.Subject = "De Wielrenners Certificaat";
+                mail.Body = "Gefeliciteerd!";
+
+                SmtpServer.Port = 587;
+                SmtpServer.Host = "mail.dewielrenners.com";
+                SmtpServer.EnableSsl = false;
+                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("info@dewielrenners.com", "mB0ZNSBvN");
+
+                SmtpServer.Send(mail);
+
+                DisplayAlert("Gelukt!", $"Certificaat is gemaild naar uw e-mailadres, {mailTo}!", "OK");
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Faild", ex.Message, "OK");
+            }
         }
     }
 }
