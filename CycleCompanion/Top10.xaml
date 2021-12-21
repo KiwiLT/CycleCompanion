@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CycleCompanion.Top10"
+             BackgroundColor="White">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Frame  CornerRadius="0" HeightRequest="40">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Snelheid"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="30" />
+                <Image Grid.Column="1" Source="top10.png" Margin="0, 0, 10, 0" HeightRequest="130"/>
+            </Grid>
+            
+        </Frame>
+
+        <Grid Padding="15" Margin="0" VerticalOptions="FillAndExpand">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+            <GradientStop Color="#7F142872"
+                          Offset="0.1"/>
+            <GradientStop Color="#7F6B1FF8"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Column="0" Grid.Row="0" Margin="10">
+                <Image Source="nummer1.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Margin="10">
+                <Label Text="{Binding deelnemer1}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Margin="10">
+                <Label Text="{Binding snelheid1}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="1" Margin="10">
+                <Image Source="nummer2.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1" Margin="10">
+                <Label Text="{Binding deelnemer2}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="1" Margin="10">
+                <Label Text="{Binding snelheid2}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="2" Margin="10">
+                <Image Source="nummer3.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="2" Margin="10">
+                <Label Text="{Binding deelnemer3}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="2" Margin="10">
+                <Label Text="{Binding snelheid3}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="3" Margin="10">
+                <Image Source="nummer4.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="3" Margin="10">
+                <Label Text="{Binding deelnemer4}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="3" Margin="10">
+                <Label Text="{Binding snelheid4}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="4" Margin="10">
+                <Image Source="nummer5.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="4" Margin="10">
+                <Label Text="{Binding deelnemer5}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="4" Margin="10">
+                <Label Text="{Binding snelheid5}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="5" Margin="10">
+                <Image Source="nummer6.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="5" Margin="10">
+                <Label Text="{Binding deelnemer6}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="5" Margin="10">
+                <Label Text="{Binding snelheid6}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="6" Margin="10">
+                <Image Source="nummer7.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="6" Margin="10">
+                <Label Text="{Binding deelnemer7}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="6" Margin="10">
+                <Label Text="{Binding snelheid7}" TextColor="White"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="0" Grid.Row="7" Margin="10">
+                <Image Source="nummer8.png" HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="7" Margin="10">
+                <Label Text="{Binding deelnemer8}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="7" Margin="10">
+                <Label Text="{Binding snelheid8}" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="8" Margin="10">
+                <Image Source="nummer9.png" HorizontalOptions="Start"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="8" Margin="10">
+                <Label Text="{Binding deelnemer9}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="8" Margin="10">
+                <Label Text="{Binding snelheid9}" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="9" Margin="10">
+                <Image Source="nummer10.png" HorizontalOptions="Start"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="9" Margin="10">
+                <Label Text="{Binding deelnemer10}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="9" Margin="10">
+                <Label Text="{Binding snelheid10}" TextColor="White"/>
+            </StackLayout>
+
+        </Grid>
+        <Grid BackgroundColor="#142872" VerticalOptions="End" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" ImageSource="MenuArrowLeft.png" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" Clicked="Navigate_Menu"/>
+            <Frame Grid.Column="1" BackgroundColor="White" HasShadow="False"/>
+            <Button Grid.Column="2" Text="Profiel" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None" Clicked="Navigate_Profiel"/>
+
+            <Frame Grid.Column="3" BackgroundColor="White" HasShadow="False"/>
+            <Button Grid.Column="4" Text="Badges" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None" Clicked="Navigate_Badge"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

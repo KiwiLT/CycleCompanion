@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CycleCompanion.Login"
+    BackgroundColor="White">
+    <StackLayout>
+        <Frame HeightRequest="100">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#142872"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#6B1FF8"
+                                  Offset="1.0"/>
+                
+                </LinearGradientBrush>
+            </Frame.Background>
+                    <Label Text="Welkom" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="28"/>
+        </Frame>
+        
+        <Frame BorderColor="Black" HeightRequest="250" CornerRadius="20" BackgroundColor="White" Margin="30">
+            <StackLayout>
+                <Label Text="Login" TextColor="Black" FontSize="30"/>
+                <Label HeightRequest="20"/>
+                <Label HeightRequest="10"/>
+                <Entry x:Name="entAppName" Placeholder="E-mail adress" Keyboard="Email" IsVisible="True"/> 
+
+                <Button ImageSource="Loginbalk.png" Scale="1.0" BackgroundColor="Transparent" Clicked="checkMail"/>
+                
+               
+            </StackLayout>
+        </Frame>
+
+        <Image Source="FietsInlogPage.png" Scale="1.0" HeightRequest="200" HorizontalOptions="Start" Margin="-5"/>
+        <Frame HeightRequest="40" BackgroundColor="#191B76" BorderColor="#191B76" HasShadow="False"/>
+    </StackLayout>
+
+    
+
+</ContentPage>
