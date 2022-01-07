@@ -124,15 +124,15 @@ namespace CycleCompanion
                     {
                         string deelnemerid = "" + Profiel.deelnemerId;
                         currentTime = DateTime.Now;
+                        double myspeed = calculateSpeed(currentTime, previousTime, previousLocation, myLocation);
                         string tijd = currentTime.ToString("HH:mm:ss");
                         string query = "INSERT INTO " +
-                            "`Locaties`(`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`) " +
-                            $"VALUES({deelnemerid}, NULL, '{tijd}', {myLocation.Latitude}, {myLocation.Longitude});";
+                            "`Locaties`(`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`, `Snelheid`) " +
+                            $"VALUES({deelnemerid}, NULL, '{tijd}', {myLocation.Latitude}, {myLocation.Longitude}, {myspeed});";
                         Console.WriteLine(query);
                         MySqlCommand command = connection.CreateCommand();
                         command.CommandText = query;
                         var reader = command.ExecuteNonQuery();
-                        calculateSpeed(currentTime, previousTime, previousLocation, myLocation);
                         previousLocation = myLocation;
                         previousTime = currentTime;
                         Thread.Sleep(5000);
@@ -146,7 +146,7 @@ namespace CycleCompanion
             }
         }
 
-        public void calculateSpeed(DateTime currentTime, DateTime previousTime, Location previousLocation, Location CurrentLocation)
+        public double calculateSpeed(DateTime currentTime, DateTime previousTime, Location previousLocation, Location CurrentLocation)
         {
             double distance = CurrentLocation.CalculateDistance(previousLocation, DistanceUnits.Kilometers);
             double timepass = (currentTime - previousTime).TotalHours;
@@ -160,6 +160,8 @@ namespace CycleCompanion
             double gemtimepass = (currentTime - Statistieken.begintijd).TotalHours;
             Statistieken.gemsnelheid = gemdistance / gemtimepass;
             Statistieken.afstand = gemdistance;
+
+            return speed;
         }
 
         public void CheckOutButton(object sender, EventArgs e)
