@@ -46,7 +46,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="0" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="klokje.png">
+            <Button Grid.Row="0" Grid.Column="1" CornerRadius="10" Margin="10" ImageSource="klokje.png" Clicked="Navigate_Geschiedenis">
                 <Button.Background Padding="100">
                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,0">
