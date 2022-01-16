@@ -39,6 +39,7 @@ namespace CycleCompanion
         }
         private async void Navigate_Geschiedenis(System.Object sender, System.EventArgs e)
         {
+            Console.WriteLine("Naar geschiedenis");
             await Navigation.PushModalAsync(new Geschiedenis());
         }
 

@@ -61,171 +61,171 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackLayout Grid.Column="0" Grid.Row="0" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time1}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="0" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="0" Margin="10">
-                <Label Text="25 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed1}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="1" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time2}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="1" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="1" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed2}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="2" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time3}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="2" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="2" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed3}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="3" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time4}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="3" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="3" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed4}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="4" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time5}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="4" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="4" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed5}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="5" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time6}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="5" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="5" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed6}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="6" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time7}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="6" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="6" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed7}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="7" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time8}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="7" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="7" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed8}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
              <StackLayout Grid.Column="0" Grid.Row="8" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>
+                <Label HorizontalOptions="Start" Text="{Binding time9}" TextColor="White" FontAttributes="Bold"/>
                 
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="8" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="8" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed9}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="9" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time10}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="9" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="9" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed10}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="10" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time11}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="10" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="10" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed11}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="11" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time12}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="11" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="11" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed12}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="12" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time13}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="12" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="12" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed13}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="13" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time14}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="13" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="13" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed14}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="14" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time15}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="14" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="14" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed15}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="15" Margin="10">
-                <Label HorizontalOptions="Start" Text="09:00" TextColor="White" FontAttributes="Bold"/>                
+                <Label HorizontalOptions="Start" Text="{Binding time16}" TextColor="White" FontAttributes="Bold"/>                
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="15" Margin="10">
                 <Label Text="-" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Grid.Column="2" Grid.Row="15" Margin="10">
-                <Label Text="50 km/u" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="{Binding speed16}" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
 
 
