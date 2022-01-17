@@ -37,6 +37,10 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Badge());
         }
+        private async void Navigate_Geschiedenis(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Geschiedenis());
+        }
 
 
         public string userName
