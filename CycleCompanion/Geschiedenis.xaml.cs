@@ -68,14 +68,14 @@ namespace CycleCompanion
             }
             geschiedenisreader.Close();
             connection.Close();
-
-            BindingContext = this;
-            InitializeComponent();
             while (i < 16)
             {
-                    speedhis[i] = (0, "00:00:00");
-                    i++;
+                speedhis[i] = (0, "00:00");
+                i++;
             }
+            BindingContext = this;
+            InitializeComponent();
+
 
         }
 
