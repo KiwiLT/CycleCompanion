@@ -28,12 +28,14 @@ namespace CycleCompanion
                 emails.Add(emailreader.GetString(0));
             }
             emailreader.Close();
-            
+            string mymail = entAppName.Text.ToLower();
 
-            if (emails.Contains(entAppName.Text))
+            if (emails.Contains(mymail))
             {
-                string userinfoquery = "SELECT * FROM `Deelnemers` WHERE `Email`= '" + entAppName.Text + "';";
+                string userinfoquery = "SELECT * FROM `Deelnemers` WHERE `Email`= @email;";
                 cmd = new MySqlCommand(userinfoquery, connection);
+                cmd.Parameters.Add("@email", MySqlDbType.String);
+                cmd.Parameters["@email"].Value = mymail;
                 MySqlDataReader userinforeader = cmd.ExecuteReader();
                 userinforeader.Read();
                 Profiel.deelnemerId = userinforeader.GetInt32(0);
