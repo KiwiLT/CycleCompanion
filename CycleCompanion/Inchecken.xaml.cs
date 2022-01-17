@@ -14,6 +14,7 @@ namespace CycleCompanion
     public partial class Inchecken : ContentPage
     {
         public static bool ingechecked { get; set; }
+        public static bool once { get; set; }
 
         public static Location startLocation { get; set; }
 
@@ -28,6 +29,7 @@ namespace CycleCompanion
         {
             BindingContext = this;
             InitializeComponent();
+            uitcheckbutton.Opacity = 0.5;
         }
 
         public async void Navigate_Main(object sender, EventArgs e)
@@ -50,9 +52,12 @@ namespace CycleCompanion
         {
 
 
-            if (ingechecked == false)
+            if (once == false)
             {
+                once = true;
                 ingechecked = true;
+                uitcheckbutton.Opacity = 1.0;
+                incheckbutton.Opacity = 0.5;
                 startLocation = null;
                 Statistieken.begintijd = DateTime.Now;
                 string connectionString = Configuration.getConnectionString();
@@ -71,10 +76,6 @@ namespace CycleCompanion
                         var location = await Geolocation.GetLocationAsync(request);
                         if (location != null)
                         {
-                            Console.WriteLine($"Latitude: {location.Latitude}\n" +
-                                              $"Longitude: {location.Longitude}\n" +
-                                              $"Altitude: {location.Altitude}\n" +
-                                              $"Speed: {location.Speed}\n");
                             myLocation = location;
                             if (previousLocation == null)
                             {
@@ -88,7 +89,7 @@ namespace CycleCompanion
 
                         }
                     }
-                    catch (FeatureNotSupportedException fnsEx)
+                    catch (FeatureNotSupportedException)
                     {
                         Console.WriteLine("Feature not supported.");
                         ingechecked = false;
@@ -96,7 +97,7 @@ namespace CycleCompanion
                         await DisplayAlert("Feature not supported error", "Gps feature is not supported on current platform", "Ok");
                         break;
                     }
-                    catch (FeatureNotEnabledException fneEx)
+                    catch (FeatureNotEnabledException)
                     {
                         Console.WriteLine("Feature not enabled.");
                         ingechecked = false;
@@ -104,7 +105,7 @@ namespace CycleCompanion
                         await DisplayAlert("Feature not enabled error", "Please make sure the gps feature on your phone works", "Ok");
                         break;
                     }
-                    catch (PermissionException pEx)
+                    catch (PermissionException)
                     {
                         Console.WriteLine("Please enable permission to get location.");
                         await DisplayAlert("Permission error", "Please enable permission to access location", "Ok");
@@ -113,7 +114,7 @@ namespace CycleCompanion
                         connection.Close();
                         break;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         Console.WriteLine("Unable to get location");
                         ingechecked = false;
@@ -129,7 +130,6 @@ namespace CycleCompanion
                         string query = "INSERT INTO " +
                             "`Locaties`(`DeelnemerID`, `LocatieID`, `Tijd`, `YCoordinaat`, `XCoordinaat`, `Snelheid`) " +
                             $"VALUES({deelnemerid}, NULL, '{tijd}', {myLocation.Latitude}, {myLocation.Longitude}, {myspeed});";
-                        Console.WriteLine(query);
                         MySqlCommand command = connection.CreateCommand();
                         command.CommandText = query;
                         var reader = command.ExecuteNonQuery();
@@ -166,11 +166,14 @@ namespace CycleCompanion
 
         public void CheckOutButton(object sender, EventArgs e)
         {
+            
             if (ingechecked == true)
             {
+                uitcheckbutton.Opacity = 0.5;
                 Statistieken.eindtijd = DateTime.Now;
                 ingechecked = false;
                 DisplayAlert("Uitgechecked", "U bent nu uitgechecked.", "Ok");
+                Console.WriteLine("stopped");
             }
             
         }

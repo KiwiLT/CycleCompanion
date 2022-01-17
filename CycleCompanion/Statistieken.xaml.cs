@@ -82,7 +82,6 @@ namespace CycleCompanion
             if (eindtijd == default(DateTime)) { eindstring = "null"; }
             else { eindstring = eindtijd.ToString("yyyy/MM/dd HH:mm:ss"); }
             string query = "UPDATE `Deelnemers` SET `BeginTijd` = '" + beginstring + "', `EindTijd` = '" + eindstring + "', `MaximaleSnelheid` = '" + Statistieken.maxsnelheid + "', `AfstandGefietst` = '" + afstand + "', `GemiddeldeSnelheid` = '" + gemsnelheid + "' WHERE `ID` = '" + Profiel.deelnemerId + "';";
-            Console.WriteLine(query);
             MySqlCommand command = connection.CreateCommand();
             command.CommandText = query;
             var reader = command.ExecuteNonQuery();
