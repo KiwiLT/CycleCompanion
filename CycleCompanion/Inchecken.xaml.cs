@@ -29,7 +29,14 @@ namespace CycleCompanion
         {
             BindingContext = this;
             InitializeComponent();
-            uitcheckbutton.Opacity = 0.5;
+            if (ingechecked)
+            {
+                incheckbutton.Opacity = 0.5;
+            } else
+            {
+                uitcheckbutton.Opacity = 0.5;
+            }
+            
         }
 
         public async void Navigate_Main(object sender, EventArgs e)
@@ -120,6 +127,7 @@ namespace CycleCompanion
                         ingechecked = false;
                         connection.Close();
                         await DisplayAlert("Unable to get location", "Sorry, we can't get your current location", "Ok");
+                        break;
                     }
                     if (myLocation != null)
                     {
