@@ -26,7 +26,7 @@
             
         </Frame>
        
-        <Grid Margin="0">
+        <Grid Margin="0" VerticalOptions="StartAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -64,19 +64,18 @@
 
             <StackLayout Grid.Column="1" Grid.Row="2" Margin="0" Opacity="{Binding BadgeSix}">
                 <Image Source="mappurple.png" />
-                <Label Text="u heeft de hele tour al meegedaan! Wat tof." TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />   
+                <Label Text="u heeft de hele tour al meegedaan!" TextColor="Black" FontSize="12" HorizontalTextAlignment="Center" FontFamily="Bold" />   
             </StackLayout>
             
          </Grid>
 
         
-        <Grid BackgroundColor="MediumPurple" VerticalOptions="End" HeightRequest="60">
+        <Grid x:Name="certbanner" BackgroundColor="MediumPurple" VerticalOptions="End" HeightRequest="60">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnSend" Text="Bekijk uw certificaat" Clicked="btnSend_Clicked"   FontFamily="Montserrat" FontAttributes="Bold"  TextColor="White" FontSize="24" BackgroundColor="Transparent"/> 
-            <!--<Label Grid.Column="0" Text="Bekijk uw certificaat"  FontFamily="Montserrat" FontAttributes="Bold" HorizontalTextAlignment="Left" TextColor="White" FontSize="30" />-->
+            <Button x:Name="btnSend" Text="Bekijk uw certificaat" Clicked="btnSend_Clicked"   FontFamily="Montserrat" FontAttributes="Bold"  TextColor="White" FontSize="24" BackgroundColor="Transparent"/>
             <Image Grid.Column="1" Source="certificaat.png" Margin="0, 0, 10, 0" />
         </Grid>
 
@@ -93,9 +92,9 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" ImageSource="MenuArrowLeft.png" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" Clicked="Navigate_Menu"/>
             <Frame Grid.Column="1" BackgroundColor="White" HasShadow="False"/>
-            <Button Grid.Column="2" Text="Profiel" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
+            <Button Grid.Column="2" Text="Profiel" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None" Clicked="Navigate_Profiel"/>
             <Frame Grid.Column="3" BackgroundColor="White" HasShadow="False"/>
-            <Button Grid.Column="4" Text="Badges" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None"/>
+            <Button Grid.Column="4" Text="Statistieken" TextColor="White" FontSize="20" BorderWidth="0" BackgroundColor="#142872" Margin="0" Padding="0" TextTransform="None" Clicked="Navigate_Statistieken"/>
         </Grid>
        
     </StackLayout>

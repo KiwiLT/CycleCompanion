@@ -47,6 +47,11 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Menu());
         }
+        public async void Navigate_Statistieken(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Statistieken());
+        }
+
         public void CheckInButton(object sender, EventArgs e)
         {
 

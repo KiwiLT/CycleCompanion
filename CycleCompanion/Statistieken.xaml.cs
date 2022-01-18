@@ -49,6 +49,11 @@ namespace CycleCompanion
             get { return "Nummer: " + Profiel.nummer; }
         }
 
+        public string uitin
+        {
+            get { if (Inchecken.ingechecked) { return "uitchecken"; } else { return "inchecken"; } }
+        }
+
         public string fietstijd
         {
             get {
@@ -104,6 +109,14 @@ namespace CycleCompanion
         public async void Navigate_Profiel(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Profiel());
+        }
+        public async void Navigate_Badge(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Badge());
+        }
+        public async void Navigate_Inchecken(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Inchecken());
         }
     }
 }
