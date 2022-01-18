@@ -30,5 +30,14 @@ namespace CycleCompanion
         {
             await Navigation.PushModalAsync(new Menu());
         }
+        public async void Navigate_Badge(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Badge());
+        }
+        public async void Navigate_Statistieken(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Statistieken());
+        }
+
     }
 }
