@@ -44,6 +44,11 @@ namespace CycleCompanion
             get { return Math.Round(afstand, 2) + " km"; }
         }
 
+        public string pnummer
+        {
+            get { return "Nummer: " + Profiel.nummer; }
+        }
+
         public string fietstijd
         {
             get {

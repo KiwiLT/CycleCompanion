@@ -71,7 +71,8 @@ namespace CycleCompanion
         {
             get
             {
-                if (Statistieken.begintijd - Statistieken.eindtijd > TimeSpan.FromHours(1.0))
+                if ((Statistieken.begintijd - Statistieken.eindtijd > TimeSpan.FromHours(1.0) && Statistieken.eindtijd != default(DateTime))
+                    || (Inchecken.ingechecked && Statistieken.begintijd - DateTime.Now > TimeSpan.FromHours(1.0)))
                 {
                     return "1.0";
                 }

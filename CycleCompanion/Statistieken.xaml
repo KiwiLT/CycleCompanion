@@ -15,7 +15,7 @@ Offset="0.1"/>
 Offset="1.0"/>
                 </LinearGradientBrush>
             </Frame.Background>
-            <Label Text="Nummer 13423" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="{Binding pnummer}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <StackLayout VerticalOptions="FillAndExpand">
             <Grid>
