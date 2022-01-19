@@ -62,7 +62,7 @@ namespace CycleCompanion
             int i = 0;
             while (geschiedenisreader.Read())
             {
-                (double, string) spdata = (geschiedenisreader.GetDouble(0), geschiedenisreader.GetTimeSpan(1).ToString().Substring(0,5));
+                (double, string) spdata = (Math.Round(geschiedenisreader.GetDouble(0), 2), geschiedenisreader.GetTimeSpan(1).ToString().Substring(0,5));
                 speedhis[i] = spdata;
                 i++;
             }
